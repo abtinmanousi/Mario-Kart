@@ -11,10 +11,11 @@ let input = Number(document.getElementById('input').value);
 
 
 function Calculate() {
-    randNum = Math.random();
-    console.log(randNum);
+    
     //// General if statement
     if (input <= 6) {
+        randNum = Math.random();
+    console.log(randNum);
 
         //// Secondary if statements
         if (randNum <= 0.45) {
