@@ -11,11 +11,10 @@ let input = Number(document.getElementById('input').value);
 
 
 function Calculate() {
-    
+    randNum = Math.random();
+    console.log(randNum);
     //// General if statement
     if (input <= 6) {
-        randNum = Math.random();
-    console.log(randNum);
 
         //// Secondary if statements
         if (randNum <= 0.45) {
@@ -39,5 +38,28 @@ function Calculate() {
             numbulletbill++;
             document.getElementById('BulletBill').innerHTML = numbulletbill;
         }
+    } else if (input <= 12) {
+        if (randNum <= 0.05) {
+            document.getElementById('prize').innerHTML = 'Banana';
+            numbanana++;
+            document.getElementById('Banana').innerHTML = numbanana;
+        } else if (randNum <= 0.1) {
+            document.getElementById('prize').innerHTML = 'Green Shell'
+            numgreenshell++;
+            document.getElementById('GreenShell').innerHTML = numgreenshell;
+        } else if (randNum <= 0.35) {
+            document.getElementById('prize').innerHTML = 'Star'
+            numstar++;
+            document.getElementById('star').innerHTML = numstar;
+        } else if (randNum <= 0.7) {
+            document.getElementById('prize').innerHTML = 'Golden Mushroom'
+            numgoldenmushroom++;
+            document.getElementById('GoldenMushroom').innerHTML = numgoldenmushroom;
+        } else {
+            document.getElementById('prize').innerHTML = 'Bullet Bill'
+            numbulletbill++;
+            document.getElementById('BulletBill').innerHTML = numbulletbill;
+        }
+
     }
 }
